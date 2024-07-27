@@ -1,0 +1,78 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+# - story: take a lesson
+#   steps:
+#   - intent: ask_lesson
+#   - action: utter_ask_language
+#   - action: utter_ask_lesson_type
+#   - action: utter_ask_difficulty_level
+#   - action: action_provide_lesson
+
+- story: provide lesson
+  steps:
+  - intent: ask_lesson
+  - action: utter_ask_language
+  - slot_was_set:
+    - language: "English"
+  - action: utter_ask_lesson_type
+  - slot_was_set:
+    - lesson_type: "grammar"
+  - action: utter_ask_difficulty_level
+  - slot_was_set:
+    - difficulty_level: "beginner"
+  - action: action_provide_lesson
+
+- story: mood check
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_happy
+  - intent: deny
+  - action: utter_cheer_up
+  - intent: deny
+  - action: utter_goodbye
+
+- story: take a quiz
+  steps:
+  - intent: take_quiz
+  - action: action_provide_quiz
+
+- story: practice conversation
+  steps:
+  - intent: practice_conversation
+  - action: action_practice_conversation
+
+- story: ask for help
+  steps:
+  - intent: get_help
+  - action: action_provide_help

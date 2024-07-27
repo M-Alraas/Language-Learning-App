@@ -1,0 +1,127 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_lesson
+  examples: |
+    - I need a lesson
+    - I want a lesson
+    - Can you give me a lesson?
+    - I want an [English](language) [grammar](lesson_type) [beginner](difficulty_level) lesson
+    - I need an [intermediate](difficulty_level) [vocabulary](lesson_type) lesson in [Dutch](language)
+    - Give me a [beginner](difficulty_level) lesson in [English](language)
+    - Can you give me a [vocabulary](lesson_type) lesson for [advanced](difficulty_level) [Spanish](language)?
+    - I need a [beginner](difficulty_level) [grammar](lesson_type) lesson
+
+
+- intent: take_quiz
+  examples: |
+    - I want to take a quiz
+    - Can you give me a quiz?
+    - Give me a quiz in [French](language)
+    - I need a [vocabulary](lesson_type) quiz
+    - Give me a quiz at [intermediate](difficulty_level) level
+
+- intent: practice_conversation
+  examples: |
+    - I want to practice conversation
+    - Can we practice speaking?
+    - Let's practice conversation in [German](language)
+    - I need a conversation practice session
+    - Let's have a conversation at [advanced](difficulty_level) level
+
+- intent: get_help
+  examples: |
+    - I need help
+    - Can you help me?
+    - I need assistance
+    - Help me with my language learning
+    - I need help with [grammar](lesson_type)
