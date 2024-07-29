@@ -101,7 +101,6 @@ nlu:
     - Can you give me a [vocabulary](lesson_type) lesson for [advanced](difficulty_level) [Spanish](language)?
     - I need a [beginner](difficulty_level) [grammar](lesson_type) lesson
 
-
 - intent: take_quiz
   examples: |
     - I want to take a quiz
