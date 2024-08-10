@@ -21,54 +21,51 @@ entities:
 slots:
   language:
     type: text
-    auto_fill: true
     mappings:
       - type: from_entity
         entity: language
   lesson_type:
     type: text
-    auto_fill: true
     mappings:
       - type: from_entity
         entity: lesson_type
   difficulty_level:
     type: text
-    auto_fill: true
     mappings:
       - type: from_entity
         entity: difficulty_level
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hey! How are you?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://imgur.com/gallery/khabib-drops-mcgregor-ufc-229-JPDai7B"
+    - text: "Here is something to cheer you up:"
+      image: "https://imgur.com/gallery/khabib-drops-mcgregor-ufc-229-JPDai7B"
 
   utter_did_that_help:
-  - text: "Did that help you, or not?"
+    - text: "Did that help you, or not?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
 
   utter_ask_language:
-  - text: "Which language would you like to learn?"
+    - text: "Which language would you like to learn?"
 
   utter_ask_lesson_type:
-  - text: "What type of lesson are you interested in? (grammar, vocabulary, etc.)"
+    - text: "What type of lesson are you interested in? (grammar, vocabulary, etc.)"
 
   utter_ask_difficulty_level:
-  - text: "What difficulty level are you looking for? (beginner, intermediate, advanced)"
+    - text: "What difficulty level are you looking for? (beginner, intermediate, advanced)"
 
   utter_provide_lesson:
-  - text: "Here is a {lesson_type} lesson in {language} at the {difficulty_level} level."
+    - text: "Here is a {lesson_type} lesson in {language} at the {difficulty_level} level."
 
 actions:
   - action_provide_lesson
@@ -76,6 +73,13 @@ actions:
   - action_practice_conversation
   - action_provide_quiz
   - action_provide_help
+
+forms:
+  ask_lesson:
+    required_slots:
+      - language
+      - lesson_type
+      - difficulty_level
 
 session_config:
   session_expiration_time: 60
